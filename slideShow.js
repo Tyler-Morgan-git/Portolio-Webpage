@@ -1,7 +1,3 @@
-function theNewThing() {
-  console.log("kek");
-}
-
 function getProjectData() {
   return (projectData = [
     {
