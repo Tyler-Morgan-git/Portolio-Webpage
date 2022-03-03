@@ -42,27 +42,6 @@ function getProjectData() {
         "Project Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien utscription. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien uscription. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien uscription. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien u mi. Pellentesque congue justo nec ante egestas, vel vulputate ex tempus. Quisque at leo varius, volutpat mi sit amet, laoreet turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices. Ut finibus tempus neque, in interdum ligula scelerisque sit amet. Quisque bibendum tincidunt mi, sit amet faucibus urna dapibus non. Fusce eget dictum mauris, sit amet consectetur leo. Nunc enim lectus, iaculis sed justo sit amet, porttitor tempus libero",
       projLink: "project1.html",
     },
-    {
-      projImg: `assets/photos/project3.jpg`,
-      projTitle: "6. Reducing program runtimes",
-      projDescription:
-        "Project Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien ut mi. Pellentesque congue justo nec ante egestas, vel vulputate ex tempus. Quisque at leo varius, volutpat mi sit amet, laoreet turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices. Ut finibus tempus neque, in interdum ligula scelerisque sit amet. Quisque bibendum tincidunt mi, sit amet faucibus urna dapibus non. Fusce eget dictum mauris, sit amet consectetur leo. Nunc enim lectus, iaculis sed justo sit amet, porttitor tempus libero",
-      projLink: "project1.html",
-    },
-    {
-      projImg: `assets/photos/project3.jpg`,
-      projTitle: "7. Reducing program runtimes",
-      projDescription:
-        "Project Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien ut mi. Pellentesque congue justo nec ante egestas, vel vulputate ex tempus. Quisque at leo varius, volutpat mi sit amet, laoreet turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices. Ut finibus tempus neque, in interdum ligula scelerisque sit amet. Quisque bibendum tincidunt mi, sit amet faucibus urna dapibus non. Fusce eget dictum mauris, sit amet consectetur leo. Nunc enim lectus, iaculis sed justo sit amet, porttitor tempus libero",
-      projLink: "project1.html",
-    },
-    {
-      projImg: `assets/photos/project3.jpg`,
-      projTitle: "8. Reducing program runtimes",
-      projDescription:
-        "Project Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien ut mi. Pellentesque congue justo nec ante egestas, vel vulputate ex tempus. Quisque at leo varius, volutpat mi sit amet, laoreet turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices. Ut finibus tempus neque, in interdum ligula scelerisque sit amet. Quisque bibendum tincidunt mi, sit amet faucibus urna dapibus non. Fusce eget dictum mauris, sit amet consectetur leo. Nunc enim lectus, iaculis sed justo sit amet, porttitor tempus libero",
-      projLink: "project1.html",
-    },
   ]);
 }
 
@@ -108,6 +87,7 @@ function initSlideShow() {
     //create new element
     let article = document.createElement("article");
     let img = document.createElement("img");
+    let imgWrapper = document.createElement("div");
     let articleTextWrapper = document.createElement("div");
     let header = document.createElement("h3");
     let description = document.createElement("p");
@@ -117,6 +97,7 @@ function initSlideShow() {
     //set classnames
     article.className = "slide";
     img.className = "articleimg";
+    imgWrapper.className = "articleImgWrapper";
     articleTextWrapper.className = "articletext";
     icon.className = "fab fa-github fa-1x";
 
@@ -136,7 +117,8 @@ function initSlideShow() {
     articleTextWrapper.appendChild(header);
     articleTextWrapper.appendChild(description);
     articleTextWrapper.appendChild(link);
-    article.appendChild(img);
+    imgWrapper.appendChild(img);
+    article.appendChild(imgWrapper);
     article.appendChild(articleTextWrapper);
 
     return article;
@@ -224,9 +206,11 @@ function initSlideShow() {
 
   // this is used to initiate the slide Show
   function renderOneSlide(desiredSlide) {
+    console.log("Initial Render");
     currentSlide = desiredSlide;
     slideShowContainerSizing(1);
     slideShowContainer.style.transform = "translateX(0)";
+    slideShowContainer.appendChild(generateSlide(desiredSlide));
     slideButtonSelector(desiredSlide);
   }
 
@@ -311,7 +295,7 @@ function initSlideShow() {
   resetTimerProgress();
 
   //Initate the first slide
-  currentSlide = 0;
+  currentSlide = 5;
   renderOneSlide(currentSlide);
 
   function handleClickScroll() {

@@ -5,8 +5,7 @@
 
   /* animation */
 
-  --startPos: 0px;
-  --endPos: 100%;
+  --articleTextHeight: 100px;
 
   /* lightMode - For the Light Mode Theme */
   --lightModeBG: #f5f5f5;
@@ -32,6 +31,27 @@
 * {
   padding: 0;
   margin: 0;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accentColor) var(--backGroundColor);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--backGroundColor);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--accentColor);
+  border-radius: 20px;
+  border: 3px solid var(--backGroundColor);
 }
 
 body {
@@ -169,75 +189,88 @@ nav div p {
 .slideShowContainer {
   position: relative;
   display: flex;
+  height: 20rem;
 }
 
 article {
   gap: 1rem;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
   align-items: center;
   padding: 1rem 0rem;
   width: 100%;
   transform: opacity 1.5 linear;
-  border: red solid 2px;
+}
+
+.articleImgWrapper {
+  height: 90%;
+  flex-basis: 30%;
+  flex-shrink: 0;
+  margin-left: 2rem;
 }
 
 .articleimg {
-  flex-basis: 30%;
-  flex-shrink: 0.2;
+  height: 100%;
   object-fit: cover;
-  height: 15rem;
 }
 
 .articletext {
-  flex-basis: 60%;
-  flex-shrink: 2;
-  align-self: center;
-  justify-content: flex-end;
+  flex-basis: 70%;
+  height: 90%;
+  margin-right: 2rem;
 }
 
 .articletext h3 {
-  padding-bottom: 1rem;
+  height: 10%;
+  margin-bottom: 0.5rem;
+  /* border: #17a2e8 solid 2px; */
 }
 
 .articletext p {
-  border: #17a2e8 solid 2px;
-  padding-bottom: 1rem;
-  height: 10rem;
-  overflow: hidden;
+  /* border: #17a2e8 solid 2px; */
+  margin-bottom: 0.5rem;
+  height: 70%;
+  overflow-y: scroll;
+}
+
+.articletext a {
+  height: 10%;
 }
 
 .slideShowButtons {
   display: flex;
   justify-content: center;
   width: fit-content;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 .slideShowButton {
-  margin: 0.5rem;
-  width: 0.7rem;
+  background-color: var(--textColor);
+  margin: 0 0.5rem;
+  height: 0.75rem;
+  width: 2rem;
   font-size: 0rem;
-  border: var(--textColor) 0.5rem solid;
-  border-radius: 20%;
-  transition: border 0.25s linear;
+  /* border: var(--textColor) 0.5rem solid; */
+  border-radius: 5%;
+  transition: all 0.25s linear;
 }
 
 .slideShowButtonSelected {
-  border: var(--accentColor) 0.5rem solid;
+  background-color: var(--accentColor);
 }
 
 .progressBar {
-  border: var(--textColor) 1px solid;
-  border-radius: 10%;
-  height: 0.15rem;
-  max-width: 1200px;
-  margin: 1rem;
+  border: var(--textColor) 2px solid;
+  border-radius: 3%;
+  height: 0.4rem;
+  max-width: 30%;
+  margin: 1rem auto;
 }
 
 .slideShowProgress {
   background-color: var(--accentColor);
-  height: 0.15rem;
+  height: 0.4rem;
   width: 0%;
   animation: progress 10s 1 linear;
   transition: opacity 1.5s linear;
@@ -288,7 +321,7 @@ footer ul li {
 
 @media screen and (max-width: 768px) {
   .slideShowContainer {
-    height: 600px;
+    height: 400px;
   }
 
   .slideShowContainer article {
@@ -296,25 +329,50 @@ footer ul li {
     display: flex;
     flex-flow: column nowrap;
     padding: 0 1rem;
-    margin-bottom: 2rem;
-    overflow-y: visible;
+    justify-content: center;
+  }
+
+  .articleImgWrapper {
+    width: 100%;
+    height: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
 
   .articleimg {
     width: 80%;
-    height: fit-content;
-    justify-content: center;
-    align-self: center;
-    margin: 0 auto;
   }
 
   .articletext {
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
     flex-basis: 60%;
     flex-shrink: 2;
-    height: fit-content;
     align-self: center;
-    justify-content: flex-end;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
   }
+
+  .articletext p {
+    text-align: left;
+  }
+
+  .articletext a {
+    height: 10%;
+    margin-bottom: 1rem;
+  }
+
+  .slideShowButtons {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin: 1rem auto;
+  }
+
   header nav {
     color: var(--textColor);
     max-width: 1200px;
@@ -347,5 +405,11 @@ footer ul li {
 
   .name br {
     content: " ";
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .slideShowContainer {
+    height: 600px;
   }
 }
