@@ -1,0 +1,351 @@
+:root {
+  /* Variables*/
+
+  --mono: monospace;
+
+  /* animation */
+
+  --startPos: 0px;
+  --endPos: 100%;
+
+  /* lightMode - For the Light Mode Theme */
+  --lightModeBG: #f5f5f5;
+  --lightModeHoverBG: #e8e8e8;
+  --lightModeText: #202124;
+  --lightModeAccent: #17a2e8;
+
+  /* darkMode - For the Dark Mode Theme */
+  --darkModeBG: #202124;
+  --darkModeHoverBG: #333335;
+  --darkModeText: #f5f5f5;
+  --darkModeAccent: red;
+
+  /* sheetColours - These feed into the rest of the sheet */
+  --backGroundColor: #f5f5f5;
+  --backGroundHoverColor: #e8e8e8;
+  --textColor: #202124;
+  --accentColor: #17a2e8;
+}
+
+/*general styling*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--backGroundColor);
+  font-family: var(--mono);
+  color: var(--textColor);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.gradborder {
+  height: 2px;
+  background-image: linear-gradient(
+    135deg,
+    var(--backGroundColor) 0%,
+    var(--textColor) 20%,
+    var(--textColor) 80%,
+    var(--backGroundColor) 100%
+  );
+}
+
+/* Header Section*/
+
+header nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: flex-start;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: top;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+nav:first-child h2 {
+  margin-right: auto;
+  padding-top: 2rem;
+  margin-top: 0;
+}
+
+nav div p {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.navbutton {
+  margin: 1rem 0.2rem 0 0.2rem;
+  padding-top: 1rem;
+  min-width: 5rem;
+  transition: background-color 80ms;
+  transition-timing-function: linear;
+  border-radius: 5px;
+}
+
+.navbutton:hover {
+  background-color: var(--backGroundHoverColor);
+}
+
+.navtext {
+  padding: 0.2rem;
+  color: var(--backGroundColor);
+  transition: color 80ms;
+  transition-timing-function: linear;
+}
+
+.navbutton:hover .navtext {
+  color: var(--textColor);
+}
+
+.navicon {
+  transition: color 80ms;
+  transition-timing-function: linear;
+  padding-bottom: 0.1rem;
+}
+
+.navbutton:hover .navicon {
+  color: var(--accentColor);
+}
+
+/* Introduction Session */
+
+#intro {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.introcontainer {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 3rem 1rem;
+}
+#intro .name {
+  text-justify: right;
+  font-size: 4rem;
+  padding-right: 3rem;
+  align-self: center;
+  user-select: none;
+}
+
+.name span {
+  transition: color 100ms;
+  transition-timing-function: ease-in;
+}
+
+.name span:hover {
+  color: var(--accentColor);
+}
+
+#intro .about {
+  height: auto;
+}
+
+.about h2 {
+  color: var(--accentColor);
+}
+
+/* Project Section */
+
+#projects {
+  margin: 0 auto;
+  margin-top: 3rem;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+.slideShowContainer {
+  position: relative;
+  display: flex;
+}
+
+article {
+  gap: 1rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 1rem 0rem;
+  width: 100%;
+  transform: opacity 1.5 linear;
+  border: red solid 2px;
+}
+
+.articleimg {
+  flex-basis: 30%;
+  flex-shrink: 0.2;
+  object-fit: cover;
+  height: 15rem;
+}
+
+.articletext {
+  flex-basis: 60%;
+  flex-shrink: 2;
+  align-self: center;
+  justify-content: flex-end;
+}
+
+.articletext h3 {
+  padding-bottom: 1rem;
+}
+
+.articletext p {
+  border: #17a2e8 solid 2px;
+  padding-bottom: 1rem;
+  height: 10rem;
+  overflow: hidden;
+}
+
+.slideShowButtons {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.slideShowButton {
+  margin: 0.5rem;
+  width: 0.7rem;
+  font-size: 0rem;
+  border: var(--textColor) 0.5rem solid;
+  border-radius: 20%;
+  transition: border 0.25s linear;
+}
+
+.slideShowButtonSelected {
+  border: var(--accentColor) 0.5rem solid;
+}
+
+.progressBar {
+  border: var(--textColor) 1px solid;
+  border-radius: 10%;
+  height: 0.15rem;
+  max-width: 1200px;
+  margin: 1rem;
+}
+
+.slideShowProgress {
+  background-color: var(--accentColor);
+  height: 0.15rem;
+  width: 0%;
+  animation: progress 10s 1 linear;
+  transition: opacity 1.5s linear;
+  opacity: 1;
+}
+
+#projects .slideShowUnprogress {
+  opacity: 0;
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.slideTransition {
+  transition: transform 1.5s ease-in-out;
+  -webkit-transition: transform 1.5s ease-in-out;
+  -moz-transition: transform 1.5s ease-in-out;
+  -ms-transition: transform 1.5s ease-in-out;
+  -o-transition: transform 1.5s ease-in-out;
+}
+
+/* Footer Section */
+
+#contact {
+  max-width: 1200px;
+  padding: 3rem 1rem 1rem 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+footer ul {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+footer ul li {
+  text-align: center;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  .slideShowContainer {
+    height: 600px;
+  }
+
+  .slideShowContainer article {
+    gap: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    overflow-y: visible;
+  }
+
+  .articleimg {
+    width: 80%;
+    height: fit-content;
+    justify-content: center;
+    align-self: center;
+    margin: 0 auto;
+  }
+
+  .articletext {
+    flex-basis: 60%;
+    flex-shrink: 2;
+    height: fit-content;
+    align-self: center;
+    justify-content: flex-end;
+  }
+  header nav {
+    color: var(--textColor);
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  nav:first-child h2 {
+    padding-top: 2rem;
+    margin-top: 0;
+    flex-basis: 100%;
+    text-align: center;
+  }
+
+  .introcontainer {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 3rem 1rem;
+  }
+
+  #intro .name {
+    text-justify: center;
+    font-size: 3rem;
+    align-self: center;
+    padding-bottom: 2rem;
+  }
+
+  .name br {
+    content: " ";
+  }
+}
