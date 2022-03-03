@@ -1,3 +1,7 @@
+function theNewThing() {
+  console.log("kek");
+}
+
 function getProjectData() {
   return (projectData = [
     {
@@ -316,6 +320,7 @@ function initSlideShow() {
 
   function handleClickScroll() {
     //breaks function if multiple Slides exist ie. A transition is already happening
+
     if (document.querySelectorAll(".slide").length > 1) {
       return;
     }
