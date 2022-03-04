@@ -2,6 +2,9 @@
   /* Variables*/
 
   --mono: monospace;
+  --maxWidth: 1200px;
+  --sectionSpacing: 1.5rem;
+  --sideSpacing: 1rem;
 
   /* animation */
 
@@ -73,42 +76,32 @@ h1 {
 
 .gradborder {
   height: 2px;
-  background-image: linear-gradient(
-    135deg,
-    var(--backGroundColor) 0%,
-    var(--textColor) 20%,
-    var(--textColor) 80%,
-    var(--backGroundColor) 100%
-  );
+  background-image: linear-gradient(135deg, var(--backGroundColor) 0%, var(--textColor) 20%, var(--textColor) 80%, var(--backGroundColor) 100%);
 }
 
 /* Header Section*/
 
 header nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  justify-content: flex-start;
+  max-width: var(--maxWidth);
+  margin: var(--sectionSpacing) auto;
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   align-items: top;
-  margin-bottom: 1rem;
-  padding: 0 1rem;
+  text-align: center;
 }
 
 nav:first-child h2 {
-  margin-right: auto;
-  padding-top: 2rem;
-  margin-top: 0;
+  flex-basis: 100%;
+  margin: 0rem auto;
 }
 
-nav div p {
-  text-align: center;
-  margin: 0 auto;
+#darkModeButton {
+  display: none;
 }
 
 .navbutton {
-  margin: 1rem 0.2rem 0 0.2rem;
-  padding-top: 1rem;
+  padding-top: 2rem;
   min-width: 5rem;
   transition: background-color 80ms;
   transition-timing-function: linear;
@@ -120,20 +113,7 @@ nav div p {
 }
 
 .navtext {
-  padding: 0.2rem;
-  color: var(--backGroundColor);
-  transition: color 80ms;
-  transition-timing-function: linear;
-}
-
-.navbutton:hover .navtext {
-  color: var(--textColor);
-}
-
-.navicon {
-  transition: color 80ms;
-  transition-timing-function: linear;
-  padding-bottom: 0.1rem;
+  padding: 0.4rem 0;
 }
 
 .navbutton:hover .navicon {
@@ -143,21 +123,22 @@ nav div p {
 /* Introduction Session */
 
 #intro {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: var(--maxWidth);
+  margin: var(--sectionSpacing) auto;
+  padding: 0 var(--sideSpacing);
 }
 
 .introcontainer {
   display: flex;
-  flex-flow: row nowrap;
-  padding: 3rem 1rem;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
+
 #intro .name {
-  text-justify: right;
+  margin: 0 auto 1rem;
   font-size: 4rem;
-  padding-right: 3rem;
-  align-self: center;
   user-select: none;
+  text-align: center;
 }
 
 .name span {
@@ -180,69 +161,81 @@ nav div p {
 /* Project Section */
 
 #projects {
-  margin: 0 auto;
-  margin-top: 3rem;
-  max-width: 1200px;
-  overflow: hidden;
+  margin: var(--sectionSpacing) auto;
+  padding: 0 var(--sideSpacing);
+  width: 1000px;
+  overflow: visible;
+  background-color: red;
 }
 
 .slideShowContainer {
+  width: 100%;
   position: relative;
-  display: flex;
-  height: 20rem;
-}
-
-article {
-  gap: 1rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  align-items: center;
-  padding: 1rem 0rem;
+}
+
+article {
+  box-sizing: border-box;
   width: 100%;
-  transform: opacity 1.5 linear;
+  /* border: black solid 2px; */
+  padding: 0 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 
 .articleImgWrapper {
-  height: 90%;
-  flex-basis: 30%;
+  display: flex;
+  justify-content: center;
+  --imgWidth: 80vw;
+  width: min(var(--imgWidth), 100%);
+  height: calc(0.56 * var(--imgWidth));
   flex-shrink: 0;
-  margin-left: 2rem;
+  overflow: hidden;
+  margin: 0 auto 1rem;
 }
 
 .articleimg {
-  height: 100%;
+  height: inherit;
+  width: inherit;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .articletext {
-  flex-basis: 70%;
-  height: 90%;
-  margin-right: 2rem;
+  /* border: red solid 2px; */
+  margin: 0 auto 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30rem;
+  gap: 1rem;
 }
 
 .articletext h3 {
-  height: 10%;
-  margin-bottom: 0.5rem;
-  /* border: #17a2e8 solid 2px; */
+  text-align: center;
+  height: 1rem;
 }
 
 .articletext p {
-  /* border: #17a2e8 solid 2px; */
-  margin-bottom: 0.5rem;
-  height: 70%;
+  /* border: blue 2px solid; */
   overflow-y: scroll;
 }
 
 .articletext a {
-  height: 10%;
+  text-align: center;
+  text-decoration: none;
+  color: var(--textColor);
 }
 
 .slideShowButtons {
   display: flex;
   justify-content: center;
   width: fit-content;
-  margin: 1rem auto;
+  margin: 0 auto;
 }
 
 .slideShowButton {
@@ -265,23 +258,24 @@ article {
   border-radius: 3%;
   height: 0.4rem;
   max-width: 30%;
-  margin: 1rem auto;
+  margin: 1rem auto 0rem;
 }
 
 .slideShowProgress {
   background-color: var(--accentColor);
   height: 0.4rem;
   width: 0%;
-  animation: progress 10s 1 linear;
+  animation: progressBarMovement 10s 1 linear;
   transition: opacity 1.5s linear;
   opacity: 1;
 }
 
-#projects .slideShowUnprogress {
+.fadeSlideShowBar {
   opacity: 0;
 }
 
-@keyframes progress {
+/* Add keyframe stuff for other browsers */
+@keyframes progressBarMovement {
   from {
     width: 0%;
   }
@@ -301,115 +295,67 @@ article {
 /* Footer Section */
 
 #contact {
-  max-width: 1200px;
-  padding: 3rem 1rem 1rem 1rem;
-  margin: 0 auto;
+  max-width: var(--maxWidth);
+  margin: var(--sectionSpacing) auto;
+  padding: 0 var(--sideSpacing);
   text-align: center;
 }
 
 footer ul {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 3rem;
-}
-
-footer ul li {
-  text-align: center;
+  margin-top: 1rem;
 }
 
 /* Media Queries */
 
-@media screen and (max-width: 768px) {
-  .slideShowContainer {
-    height: 400px;
-  }
-
-  .slideShowContainer article {
-    gap: 2rem;
-    display: flex;
-    flex-flow: column nowrap;
-    padding: 0 1rem;
-    justify-content: center;
-  }
-
-  .articleImgWrapper {
-    width: 100%;
-    height: 30%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-  }
-
-  .articleimg {
-    width: 80%;
-  }
-
-  .articletext {
-    height: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    flex-basis: 60%;
-    flex-shrink: 2;
-    align-self: center;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  .articletext p {
-    text-align: left;
-  }
-
-  .articletext a {
-    height: 10%;
-    margin-bottom: 1rem;
-  }
-
-  .slideShowButtons {
-    display: flex;
-    justify-content: center;
-    width: fit-content;
-    margin: 1rem auto;
-  }
-
+@media screen and (min-width: 768px) {
+  /* header section */
   header nav {
-    color: var(--textColor);
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-content: center;
-    display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
     align-items: center;
   }
 
-  nav:first-child h2 {
-    padding-top: 2rem;
-    margin-top: 0;
-    flex-basis: 100%;
-    text-align: center;
+  #darkModeButton {
+    display: block;
   }
+
+  nav:first-child h2 {
+    margin: 0 auto 0 1rem;
+    text-align: left;
+  }
+
+  .navbutton {
+    padding-top: 1rem;
+  }
+
+  /* intro section */
 
   .introcontainer {
-    display: flex;
-    flex-flow: column nowrap;
-    padding: 3rem 1rem;
+    flex-flow: row nowrap;
+    gap: 2rem;
   }
 
-  #intro .name {
-    text-justify: center;
-    font-size: 3rem;
-    align-self: center;
-    padding-bottom: 2rem;
+  /* projects */
+  article {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
   }
 
-  .name br {
-    content: " ";
+  .articleImgWrapper {
+    --imgWidth: 40vw;
+    flex-basis: 30%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    overflow: hidden;
+    margin: 0 1rem 1rem 1rem;
+    justify-self: flex-start;
   }
-}
 
-@media screen and (max-width: 400px) {
-  .slideShowContainer {
-    height: 600px;
+  .articletext {
+    margin: 0 0 1rem 0;
+    height: 18rem;
+    align-items: start;
+    justify-content: start;
   }
 }

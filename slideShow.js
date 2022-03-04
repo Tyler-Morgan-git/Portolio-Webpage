@@ -1,36 +1,21 @@
 function getProjectData() {
-  return (projectData = [
+  return [
     {
       projImg: `assets/photos/project1.jpg`,
       projTitle: "0. Hack.api",
-      projDescription:
-        "Project Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien ut mi. Pellentesque congue justo nec ante egestas, vel vulputate ex tempus. Quisque at leo varius, volutpat mi sit amet, laoreet turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices. Ut finibus tempus neque, in interdum ligula scelerisque sit amet. Quisque bibendum tincidunt mi, sit amet faucibus urna dapibus non. Fusce eget dictum mauris, sit amet consectetur leo. Nunc enim lectus, iaculis sed justo sit amet, porttitor tempus libero",
+      projDescription: "small text, this is a small description",
       projLink: "project1.html",
     },
     {
       projImg: `assets/photos/project2.jpg`,
       projTitle: "1. Space Image Classification",
       projDescription:
-        "Project Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien ut mi. Pellentesque congue justo nec ante egestas, vel vulputate ex tempus. Quisque at leo varius, volutpat mi sit amet, laoreet turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices. Ut finibus tempus neque, in interdum ligula scelerisque sit amet. Quisque bibendum tincidunt mi, sit amet faucibus urna dapibus non. Fusce eget dictum mauris, sit amet consectetur leo. Nunc enim lectus, iaculis sed justo sit amet, porttitor tempus libero",
+        "150 words, Project Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien ut mi. Pellentesque congue justo nec ante egestas, vel vulputate ex tempus. Quisque at leo varius, volutpat mi sit amet, laoreet turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices. Ut finibus tempus neque, in interdum ligula scelerisque sit amet. Quisque bibendum tincidunt mi, sit amet faucibus urna dapibus non. Fusce eget dictum mauris, sit amet consectetur leo. Nunc enim lectus, iaculis sed justo sit amet, porttitor tempus libero,turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices.tempus libero,turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices.",
       projLink: "project1.html",
     },
     {
       projImg: `assets/photos/project3.jpg`,
       projTitle: "2. kek Project",
-      projDescription:
-        "Project Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien ut mi. Pellentesque congue justo nec ante egestas, vel vulputate ex tempus. Quisque at leo varius, volutpat mi sit amet, laoreet turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices. Ut finibus tempus neque, in interdum ligula scelerisque sit amet. Quisque bibendum tincidunt mi, sit amet faucibus urna dapibus non. Fusce eget dictum mauris, sit amet consectetur leo. Nunc enim lectus, iaculis sed justo sit amet, porttitor tempus libero",
-      projLink: "project1.html",
-    },
-    {
-      projImg: `assets/photos/project1.jpg`,
-      projTitle: "3. Big Dingus",
-      projDescription:
-        "Project Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien ut mi. Pellentesque congue justo nec ante egestas, vel vulputate ex tempus. Quisque at leo varius, volutpat mi sit amet, laoreet turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices. Ut finibus tempus neque, in interdum ligula scelerisque sit amet. Quisque bibendum tincidunt mi, sit amet faucibus urna dapibus non. Fusce eget dictum mauris, sit amet consectetur leo. Nunc enim lectus, iaculis sed justo sit amet, porttitor tempus libero",
-      projLink: "project1.html",
-    },
-    {
-      projImg: `assets/photos/project2.jpg`,
-      projTitle: "4. Increasing program runtimes",
       projDescription:
         "Project Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien ut mi. Pellentesque congue justo nec ante egestas, vel vulputate ex tempus. Quisque at leo varius, volutpat mi sit amet, laoreet turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices. Ut finibus tempus neque, in interdum ligula scelerisque sit amet. Quisque bibendum tincidunt mi, sit amet faucibus urna dapibus non. Fusce eget dictum mauris, sit amet consectetur leo. Nunc enim lectus, iaculis sed justo sit amet, porttitor tempus libero",
       projLink: "project1.html",
@@ -42,7 +27,42 @@ function getProjectData() {
         "Project Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien utscription. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien uscription. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien uscription. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien u mi. Pellentesque congue justo nec ante egestas, vel vulputate ex tempus. Quisque at leo varius, volutpat mi sit amet, laoreet turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices. Ut finibus tempus neque, in interdum ligula scelerisque sit amet. Quisque bibendum tincidunt mi, sit amet faucibus urna dapibus non. Fusce eget dictum mauris, sit amet consectetur leo. Nunc enim lectus, iaculis sed justo sit amet, porttitor tempus libero",
       projLink: "project1.html",
     },
-  ]);
+    {
+      projImg: `assets/photos/project2.jpg`,
+      projTitle: "1. Space Image Classification",
+      projDescription:
+        "150 words, Project Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien ut mi. Pellentesque congue justo nec ante egestas, vel vulputate ex tempus. Quisque at leo varius, volutpat mi sit amet, laoreet turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices. Ut finibus tempus neque, in interdum ligula scelerisque sit amet. Quisque bibendum tincidunt mi, sit amet faucibus urna dapibus non. Fusce eget dictum mauris, sit amet consectetur leo. Nunc enim lectus, iaculis sed justo sit amet, porttitor tempus libero,turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices.tempus libero,turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices.",
+      projLink: "project1.html",
+    },
+    {
+      projImg: `assets/photos/project3.jpg`,
+      projTitle: "2. kek Project",
+      projDescription:
+        "Project Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien ut mi. Pellentesque congue justo nec ante egestas, vel vulputate ex tempus. Quisque at leo varius, volutpat mi sit amet, laoreet turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices. Ut finibus tempus neque, in interdum ligula scelerisque sit amet. Quisque bibendum tincidunt mi, sit amet faucibus urna dapibus non. Fusce eget dictum mauris, sit amet consectetur leo. Nunc enim lectus, iaculis sed justo sit amet, porttitor tempus libero",
+      projLink: "project1.html",
+    },
+    {
+      projImg: `assets/photos/project3.jpg`,
+      projTitle: "5. Reducing program runtimes",
+      projDescription:
+        "Project Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien utscription. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien uscription. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien uscription. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien u mi. Pellentesque congue justo nec ante egestas, vel vulputate ex tempus. Quisque at leo varius, volutpat mi sit amet, laoreet turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices. Ut finibus tempus neque, in interdum ligula scelerisque sit amet. Quisque bibendum tincidunt mi, sit amet faucibus urna dapibus non. Fusce eget dictum mauris, sit amet consectetur leo. Nunc enim lectus, iaculis sed justo sit amet, porttitor tempus libero",
+      projLink: "project1.html",
+    },
+    {
+      projImg: `assets/photos/project2.jpg`,
+      projTitle: "1. Space Image Classification",
+      projDescription:
+        "150 words, Project Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien ut mi. Pellentesque congue justo nec ante egestas, vel vulputate ex tempus. Quisque at leo varius, volutpat mi sit amet, laoreet turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices. Ut finibus tempus neque, in interdum ligula scelerisque sit amet. Quisque bibendum tincidunt mi, sit amet faucibus urna dapibus non. Fusce eget dictum mauris, sit amet consectetur leo. Nunc enim lectus, iaculis sed justo sit amet, porttitor tempus libero,turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices.tempus libero,turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices.",
+      projLink: "project1.html",
+    },
+    {
+      projImg: `assets/photos/project3.jpg`,
+      projTitle: "2. kek Project",
+      projDescription:
+        "Project Description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales, dui aliquam venenatis finibus, metus velit aliquam augue, at consequat eros sapien ut mi. Pellentesque congue justo nec ante egestas, vel vulputate ex tempus. Quisque at leo varius, volutpat mi sit amet, laoreet turpis. Proin elementum faucibus purus eget pretium. Aliquam sit amet sem mattis, gravida tellus nec, mollis est. Fusce non velit id justo posuere ultrices. Ut finibus tempus neque, in interdum ligula scelerisque sit amet. Quisque bibendum tincidunt mi, sit amet faucibus urna dapibus non. Fusce eget dictum mauris, sit amet consectetur leo. Nunc enim lectus, iaculis sed justo sit amet, porttitor tempus libero",
+      projLink: "project1.html",
+    },
+  ];
 }
 
 function initSlideShow() {
@@ -72,14 +92,10 @@ function initSlideShow() {
   function slideButtonSelector(desiredSlide) {
     //turn off button of currentSlide
     if (document.querySelector(".slideShowButtonSelected") != null) {
-      document
-        .querySelector(".slideShowButtonSelected")
-        .classList.toggle("slideShowButtonSelected");
+      document.querySelector(".slideShowButtonSelected").classList.toggle("slideShowButtonSelected");
     }
     //turn on button of desired Slide
-    document
-      .querySelectorAll(".slideShowButton")
-      [desiredSlide].classList.toggle("slideShowButtonSelected");
+    document.querySelectorAll(".slideShowButton")[desiredSlide].classList.toggle("slideShowButtonSelected");
   }
 
   function generateSlide(slideNum) {
@@ -107,9 +123,7 @@ function initSlideShow() {
 
     //add text
     header.appendChild(document.createTextNode(projData[slideNum].projTitle));
-    description.appendChild(
-      document.createTextNode(projData[slideNum].projDescription)
-    );
+    description.appendChild(document.createTextNode(projData[slideNum].projDescription));
     link.appendChild(document.createTextNode("Check out this project!"));
 
     //make data structure
@@ -154,10 +168,7 @@ function initSlideShow() {
     const leftDist = Math.abs(leftIndex - centerOfSlidesArray);
 
     //right distance from index array
-    const rightIndex = slidesArray.indexOf(
-      desiredPosition,
-      centerOfSlidesArray
-    );
+    const rightIndex = slidesArray.indexOf(desiredPosition, centerOfSlidesArray);
     const rightDist = Math.abs(rightIndex - centerOfSlidesArray);
 
     if (leftDist < rightDist) {
@@ -177,12 +188,7 @@ function initSlideShow() {
   }
 
   //sets the position to the desired slide
-  function slideShowContainerPosition(
-    desiredSlide,
-    slidesArray,
-    animation,
-    direction
-  ) {
+  function slideShowContainerPosition(desiredSlide, slidesArray, animation, direction) {
     if (animation === true) {
       slideAnimationOn();
     } else if (animation === false) {
@@ -191,16 +197,14 @@ function initSlideShow() {
     let desiredPosition = slidesArray.indexOf(desiredSlide);
     let numSlides = slidesArray.length;
 
+    //translation values
+
     if (direction == "left") {
       //translate logic for left scroll
-      slideShowContainer.style.transform = `translateX(${
-        ((numSlides - 1) / numSlides) * 100
-      }%)`;
+      slideShowContainer.style.transform = `translateX(${((numSlides - 1) / numSlides) * 100}%)`;
     } else {
       //translate logic for right scroll
-      slideShowContainer.style.transform = `translateX(-${
-        (desiredPosition / slidesArray.length) * 100
-      }%)`;
+      slideShowContainer.style.transform = `translateX(-${(desiredPosition / slidesArray.length) * 100}%)`;
     }
   }
 
@@ -218,15 +222,12 @@ function initSlideShow() {
     slideShowContainerSizing(slidesToRender.length + 1);
     for (let i = 0; i < slidesToRender.length; i++) {
       slideShowContainer.appendChild(generateSlide(slidesToRender[i]));
-      console.log(
-        "🚀 ~ file: slideShow.jS ~ line 221 ~ renderSlidesRight ~ slideShowContainer.appendChild(generateSlide(slidesToRender[i]))",
-        slideShowContainer.appendChild(generateSlide(slidesToRender[i]))
-      );
       console.log("render right");
     }
     slidesToRender.unshift(currentSlide);
     return slidesToRender;
   }
+
   // deletes all children except last
   function deleteSlidesLeft() {
     return (document.querySelector(".slideTransition").ontransitionend = () => {
@@ -237,10 +238,8 @@ function initSlideShow() {
       }
       slideShowContainer.style.transform = `translateX(0%)`;
       slideShowContainerSizing(1);
-      document
-        .querySelector(".slideShowProgress")
-        .classList.remove("slideShowUnprogress");
-      resetTimerProgress();
+      document.querySelector(".slideShowProgress").classList.remove("fadeSlideShowBar");
+      resetTimer();
     });
   }
 
@@ -270,15 +269,13 @@ function initSlideShow() {
       slideShowContainer.style.transform = `translateX(0%)`;
       slideShowContainer.style.right = "0%";
       slideShowContainerSizing(1);
-      document
-        .querySelector(".slideShowProgress")
-        .classList.remove("slideShowUnprogress");
-      resetTimerProgress();
+      document.querySelector(".slideShowProgress").classList.remove("fadeSlideShowBar");
+      resetTimer();
     });
   }
 
   // resets interval timer and progress bar
-  function setTimer() {
+  function createTimer() {
     let slideTimer;
 
     return () => {
@@ -295,11 +292,10 @@ function initSlideShow() {
     };
   }
 
-  const resetTimerProgress = setTimer();
-  resetTimerProgress();
+  const resetTimer = createTimer();
 
   //Initate the first slide
-  currentSlide = 5;
+  currentSlide = 0;
   renderOneSlide(currentSlide);
 
   function handleClickScroll() {
@@ -318,18 +314,14 @@ function initSlideShow() {
       slideShowContainerPosition(desiredSlide, slides, true, direction);
       slideButtonSelector(desiredSlide);
       currentSlide = desiredSlide;
-      document
-        .querySelector(".slideShowProgress")
-        .classList.add("slideShowUnprogress");
+      document.querySelector(".slideShowProgress").classList.add("fadeSlideShowBar");
       deleteSlidesRight();
     } else if (direction == "right") {
       slides = renderSlidesRight(renderSlides);
       slideShowContainerPosition(desiredSlide, slides, true, direction);
       slideButtonSelector(desiredSlide);
       currentSlide = desiredSlide;
-      document
-        .querySelector(".slideShowProgress")
-        .classList.add("slideShowUnprogress");
+      document.querySelector(".slideShowProgress").classList.add("fadeSlideShowBar");
       deleteSlidesLeft();
     }
   }
@@ -344,16 +336,14 @@ function initSlideShow() {
     let desiredSlide = (currentSlide + 1) % totalNumberofSlides;
 
     //renders desiredSlide to the right
-    const slides = renderSlidesRight([desiredSlide]);
+    const slidesArray = renderSlidesRight([desiredSlide]);
 
     //do animation and select button
-    slideShowContainerPosition(desiredSlide, slides, true, "right");
+    slideShowContainerPosition(desiredSlide, slidesArray, true, "right");
     slideButtonSelector(desiredSlide);
     currentSlide = desiredSlide;
     deleteSlidesLeft();
     //window animation frame
   }
-
-  //document.addEventListener("click", handleAutoScroll);
 }
 initSlideShow();
