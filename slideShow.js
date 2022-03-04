@@ -218,6 +218,10 @@ function initSlideShow() {
     slideShowContainerSizing(slidesToRender.length + 1);
     for (let i = 0; i < slidesToRender.length; i++) {
       slideShowContainer.appendChild(generateSlide(slidesToRender[i]));
+      console.log(
+        "🚀 ~ file: slideShow.jS ~ line 221 ~ renderSlidesRight ~ slideShowContainer.appendChild(generateSlide(slidesToRender[i]))",
+        slideShowContainer.appendChild(generateSlide(slidesToRender[i]))
+      );
       console.log("render right");
     }
     slidesToRender.unshift(currentSlide);
