@@ -163,9 +163,8 @@ nav:first-child h2 {
 #projects {
   margin: var(--sectionSpacing) auto;
   padding: 0 var(--sideSpacing);
-  width: 1000px;
-  overflow: visible;
-  background-color: red;
+  max-width: var(--maxWidth);
+  overflow: hidden;
 }
 
 .slideShowContainer {
@@ -191,7 +190,7 @@ article {
   justify-content: center;
   --imgWidth: 80vw;
   width: min(var(--imgWidth), 100%);
-  height: calc(0.56 * var(--imgWidth));
+  height: calc(0.56 * var(--imgWidth)); /* 0.56 = 9/16 for aspect ratio*/
   flex-shrink: 0;
   overflow: hidden;
   margin: 0 auto 1rem;
@@ -205,13 +204,13 @@ article {
 }
 
 .articletext {
-  /* border: red solid 2px; */
-  margin: 0 auto 1rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  height: 30rem;
+  height: calc(47.5rem - calc(0.885 * 100vw)); /* These are based on a function from testing*/
   gap: 1rem;
 }
 
@@ -254,16 +253,17 @@ article {
 }
 
 .progressBar {
-  border: var(--textColor) 2px solid;
-  border-radius: 3%;
-  height: 0.4rem;
+  box-sizing: border-box;
+  border: var(--textColor) 3px solid;
+  height: 0.7rem;
   max-width: 30%;
   margin: 1rem auto 0rem;
 }
 
 .slideShowProgress {
+  box-sizing: content-box;
   background-color: var(--accentColor);
-  height: 0.4rem;
+  height: 100%;
   width: 0%;
   animation: progressBarMovement 10s 1 linear;
   transition: opacity 1.5s linear;
@@ -306,6 +306,12 @@ footer ul {
 }
 
 /* Media Queries */
+
+@media screen and (min-width: 500px) {
+  .articletext {
+    height: calc(30rem - calc(0.32 * 100vw));
+  }
+}
 
 @media screen and (min-width: 768px) {
   /* header section */
