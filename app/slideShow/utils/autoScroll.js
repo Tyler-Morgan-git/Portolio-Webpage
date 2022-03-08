@@ -20,7 +20,7 @@ function handleAutoScroll() {
   //do animation and select button
   slideShowContainerPosition(desiredSlide, slidesArray, true, "right");
   slideButtonSelector(desiredSlide);
-  currentSlide = desiredSlide;
+  globalVar.set("currentSlide", desiredSlide);
   deleteSlidesLeft();
   //window animation frame
 }

@@ -11,11 +11,11 @@ function initialRender() {
   const slideButtonContainer = document.querySelector(".slideShowButtons");
 
   function buildButtons() {
-    for (let i = 0; i < totalNumberofSlides; i++) {
-      let button = document.createElement("div");
-      button.className = "slideShowButton";
+    for (let i = 0; i < totalNumberofSlides; i++) {  // for number of images
+      let button = document.createElement("div"); //creates a <div> </div>
+      button.className = "slideShowButton";       // makes <div class="slideShowButton"> 
       button.append(document.createTextNode(i));
-      slideButtonContainer.appendChild(button);
+      slideButtonContainer.appendChild(button);   // appends <div> to specified parent container
     }
   }
 

@@ -1,7 +1,5 @@
 import darkMode from "./darkMode/darkModeToggle.js";
-
-darkMode();
-
 import initSlideShow from "./slideShow/slideShow.js";
 
+darkMode();
 initSlideShow(0);
